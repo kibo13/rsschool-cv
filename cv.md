@@ -32,3 +32,21 @@ function createPhoneNumber(numbers) {
   return format;
 }
 ```
+
+## Work experience
+
+- [Github](https://github.com/kibo13)
+- [Codewars](https://www.codewars.com/users/kibo13)
+- [Codepen](https://codepen.io/kibo13)
+
+## Education
+
+- [Moscow Aviation Institute](https://mai.ru/)
+- [JavaScript 2.0](https://itgid.info/)
+- [Git. Quick Start](https://geekbrains.ru/)
+- [Responsive Web Design](https://www.freecodecamp.org/)
+- [TryJava course](https://khasang.io/)
+
+## English
+
+My English level is A2. I improve my English skills by english class.
