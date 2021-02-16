@@ -75,6 +75,110 @@ ul li {
   text-align: right;
 }
 
+.cv-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.cv-summary,
+.cv-lang {
+  grid-column: span 3;
+}
+
+.cv-list article {
+  position: relative;
+  padding: 20px;
+  border: 1px solid rgba(229, 231, 235, 1);
+  border-radius: 4px;
+}
+
+.cv-list article::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 7px;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #01579b;
+}
+
+.cv-list article::after {
+  content: attr(data-title);
+  position: absolute;
+  top: -9px;
+  right: 15px;
+  padding: 3px 6px;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: whitesmoke;
+  background-color: #2676ff;
+}
+
+.cv-skills__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cv-skills__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  font-size: 24px;
+  border: 1px solid rgba(229, 231, 235, 1);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.cv-skills__item:nth-child(1):hover {
+  color: #e65100;
+}
+
+.cv-skills__item:nth-child(2):hover {
+  color: #2676ff;
+}
+
+.cv-skills__item:nth-child(3):hover {
+  color: #ec407a;
+}
+
+.cv-skills__item:nth-child(4):hover {
+  color: #8e24aa;
+}
+
+.cv-skills__item:nth-child(5):hover {
+  color: #ffd600;
+}
+
+.cv-skills__item:nth-child(6):hover {
+  color: #1b5e20;
+}
+
+.cv-skills__item:nth-child(7):hover {
+  color: #00b0ff;
+}
+
+.cv-skills__item:nth-child(8):hover {
+  color: #00b74a;
+}
+
+.cv-skills__item:nth-child(9):hover {
+  color: #000000;
+}
+
+@media (max-width: 1024px) {
+  .cv-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cv-summary,
+  .cv-education,
+  .cv-lang {
+    grid-column: span 2;
+  }
+}
+
 @media (max-width: 640px) {
   .container {
     width: 95%;
@@ -88,5 +192,16 @@ ul li {
 
   .cv-contacts__list {
     display: none;
+  }
+
+  .cv-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .cv-summary,
+  .cv-education,
+  .cv-lang {
+    grid-column: auto;
   }
 }
