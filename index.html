@@ -5,20 +5,46 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boris Kim - Frontend developer</title>
-    <link rel="stylesheet" type="text/css" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css" />
   </head>
   <body>
-    <main>
+    <header class="header">
       <div class="container">
-        <section class="header">
-          <img
-            class="avatar"
-            src="https://cdn3.iconfinder.com/data/icons/avatar-user/64/Artboard_9-512.png"
-            alt="Avatar"
-          />
-          <h1>Boris Kim</h1>
-        </section>
+        <div class="row">
+          <div class="cv-person">
+            <img
+              class="cv-person__avatar"
+              src="./assets/images/avatar.png"
+              alt="Avatar"
+            />
+            <h1 class="cv-person__name">Boris Kim</h1>
+          </div>
+          <ul class="cv-contacts__list">
+            <li class="cv-contacts__item">
+              <a href="mailto:kimboris1310@gmail.com">
+                <i class="fas fa-envelope"></i>
+                kimboris1310@gmail.com
+              </a>
+            </li>
+            <li class="cv-contacts__item">
+              <a href="telegram.me/@kimboris1310">
+                <i class="fas fa-paper-plane"></i>
+                @kimboris1310
+              </a>
+            </li>
+            <li class="cv-contacts__item">
+              <a href="tel:+77713404056">
+                <i class="fas fa-phone"></i>
+                +7 (771) 340-4056
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </main>
+    </header>
   </body>
 </html>
