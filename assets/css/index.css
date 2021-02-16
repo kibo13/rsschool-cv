@@ -166,6 +166,61 @@ ul li {
   color: #000000;
 }
 
+.cv-sign {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cv-sign__links {
+  position: relative;
+  top: 10px;
+}
+
+.cv-sign__links img {
+  width: 48px;
+}
+
+.cv-sign__course {
+  position: absolute;
+  top: -45px;
+  left: -60px;
+  padding: 5px 10px;
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 4px;
+}
+
+.cv-sign__course::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 5px;
+  border-left: 16px solid transparent;
+  border-top: 8px solid rgba(0, 0, 0, 1);
+}
+
+.cv-sign__line {
+  margin: 0 auto;
+  width: 70%;
+  height: 20px;
+  background-image: radial-gradient(
+    farthest-side at 50% -50%,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  border: none;
+}
+
+.cv-sign__year {
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 @media (max-width: 1024px) {
   .cv-list {
     display: grid;
