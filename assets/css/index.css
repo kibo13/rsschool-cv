@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 18px "Nunito", sans-serif;
+  color: rgba(75, 85, 99, 1);
+  background-color: rgba(243, 244, 246, 1);
+}
+
+a {
+  color: rgba(75, 85, 99, 1);
+  text-decoration: none;
+}
+
+ul li {
+  padding: 2px;
+  list-style-type: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px 10px;
+  width: 80%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 1px solid rgba(229, 231, 235, 1);
+}
+
+.cv-person {
+  display: flex;
+}
+
+.cv-person__avatar {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(75, 85, 99, 1);
+  border-radius: 50%;
+}
+
+.cv-person__name {
+  position: relative;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-style: italic;
+}
+
+.cv-person__name::after {
+  content: "Frontend developer";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  font-size: 10px;
+  color: #2676ff;
+  white-space: nowrap;
+}
+
+.cv-contacts__list {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+}
+
+.cv-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.cv-summary,
+.cv-lang {
+  grid-column: span 3;
+}
+
+.cv-list article {
+  position: relative;
+  padding: 20px;
+  border: 1px solid rgba(229, 231, 235, 1);
+  border-radius: 4px;
+}
+
+.cv-list article::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 7px;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #01579b;
+}
+
+.cv-list article::after {
+  content: attr(data-title);
+  position: absolute;
+  top: -9px;
+  right: 15px;
+  padding: 3px 6px;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: whitesmoke;
+  background-color: #2676ff;
+}
+
+.cv-skills__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cv-skills__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  font-size: 24px;
+  border: 1px solid rgba(229, 231, 235, 1);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.cv-skills__item:nth-child(1):hover {
+  color: #e65100;
+}
+
+.cv-skills__item:nth-child(2):hover {
+  color: #2676ff;
+}
+
+.cv-skills__item:nth-child(3):hover {
+  color: #ec407a;
+}
+
+.cv-skills__item:nth-child(4):hover {
+  color: #8e24aa;
+}
+
+.cv-skills__item:nth-child(5):hover {
+  color: #ffd600;
+}
+
+.cv-skills__item:nth-child(6):hover {
+  color: #1b5e20;
+}
+
+.cv-skills__item:nth-child(7):hover {
+  color: #00b0ff;
+}
+
+.cv-skills__item:nth-child(8):hover {
+  color: #00b74a;
+}
+
+.cv-skills__item:nth-child(9):hover {
+  color: #000000;
+}
+
+.cv-sign {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cv-sign__links {
+  position: relative;
+  top: 10px;
+}
+
+.cv-sign__links img {
+  width: 48px;
+}
+
+.cv-sign__course {
+  position: absolute;
+  top: -45px;
+  left: -60px;
+  padding: 5px 10px;
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 4px;
+}
+
+.cv-sign__course::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 5px;
+  border-left: 16px solid transparent;
+  border-top: 8px solid rgba(0, 0, 0, 1);
+}
+
+.cv-sign__line {
+  margin: 0 auto;
+  width: 70%;
+  height: 20px;
+  background-image: radial-gradient(
+    farthest-side at 50% -50%,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  border: none;
+}
+
+.cv-sign__year {
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .cv-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cv-summary,
+  .cv-education,
+  .cv-lang {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 95%;
+    padding: 20px 0;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cv-contacts__list {
+    display: none;
+  }
+
+  .cv-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .cv-summary,
+  .cv-education,
+  .cv-lang {
+    grid-column: auto;
+  }
+}
